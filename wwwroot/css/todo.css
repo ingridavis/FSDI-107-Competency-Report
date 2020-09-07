@@ -1,0 +1,25 @@
+
+
+.parent-container{
+    display: flex;
+    height: 100%;
+}
+
+.side{
+    flex:1;
+}
+
+.content{
+    flex:1;
+    background-color: lightblue;
+}
+
+.details{
+    flex:1;
+}
+
+/* To push changes:
+- add a message
+- commit the changes (local copy)
+
+*/
