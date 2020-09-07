@@ -27,8 +27,8 @@ namespace myCalendar.Controllers
             {
                 Id =2,
                 Title = "Get Milk",
-                Important = false,
                 Notes = "Get milk next time",
+                Important = false,
                 Date = DateTime.Now
             };
             list.Add(t2);

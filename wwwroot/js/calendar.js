@@ -27,7 +27,7 @@ function displayTask(task){
         <i class="far fa-circle check"></i>
         <div class='task-content'>
             <h5 class='task-title'>${task.title}</h5>
-            <label class='task-notes'>${tasks.notes}</label> 
+            <label class='task-notes'>${task.notes}</label> 
         </div>
 
     <i class='fas fa-star important'></i>
@@ -38,7 +38,7 @@ function displayTask(task){
 }
 
 function init(){
-    console.log("MyCalendar Page  ");
+    console.log("MyCalendar Page");
 
     fetchTasks();
 }
