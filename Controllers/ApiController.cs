@@ -11,7 +11,7 @@ namespace myCalendar.Controllers
     {
             // API is a programming interface
 
-         public IActionResult Tasks()
+         public IActionResult Tasks() // This action is to retrieve from the database
         {
             var list = new List<task>();
 
@@ -52,10 +52,7 @@ namespace myCalendar.Controllers
                 Date = DateTime.Now
             };
             list.Add(t4);
-
             return Json(list);
-
         }
-        
     }
 }
