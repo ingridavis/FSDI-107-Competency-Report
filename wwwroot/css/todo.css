@@ -3,6 +3,9 @@
 .parent-container{
     display: flex;
     height: 100%;
+    font-family: 'PT Serif', serif;
+    border-radius: .5rem;
+
 }
 
 .side{
@@ -11,12 +14,32 @@
 
 .content{
     flex:1;
-    background-color: lightblue;
+    background-color: rgb(88, 168, 179);
 }
 
 .details{
     flex:1;
 }
+/* Title */
+.content h4{
+    font-size: 2.5rem;
+    color: white;
+    padding: 1rem;
+
+    
+}
+ /* Actual listed tasks */ 
+.section-tasks{
+    
+   
+}
+.task{
+    background-color: white;
+    margin: 1rem 1rem .5rem 1rem;/* top right bottom left */
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem grey;
+}
+
 
 /* To push changes:
 - add a message
