@@ -8,11 +8,17 @@ using System;
 namespace myCalendar.Controllers
 {
     public class ApiController : Controller
-    {
+    {   
+        private DataContext database;
+        public ApiController(DataContext db)
+        {
+            this.database = db;
+        }
             // API is a programming interface
 
          public IActionResult Tasks() // This action is to retrieve from the database
         {
+            
             var list = new List<task>();
 
             var t1 = new task();
@@ -53,6 +59,14 @@ namespace myCalendar.Controllers
             };
             list.Add(t4);
             return Json(list);
+        }
+        [HttpPost]
+        public IActionResult CreateTask( [FromBody] task theTask ) //post
+        {
+            database.TasksTable.Add(theTask);
+            database.SaveChanges();
+
+            return Json(theTask);
         }
     }
 }
