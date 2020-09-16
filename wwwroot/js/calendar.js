@@ -37,8 +37,38 @@ function displayTask(task){
     container.append(syntax);
 }
 
+function register(){
+    // get values from the form
+    let title = $("#txtTitle").val();
+    let notes = $("#txtNotes").val();
+    let imp = $("#chkImportant").is(":checked");
+
+    // validation
+    if(title.length < 5){
+        alert("Please verify the name of the task");
+        return; // no code will be extcuted, code returns out of the function
+
+    }
+
+    // create an object
+
+    let task = { 
+        title: title,
+        notes: notes,
+        important: imp,
+    };
+    console.log(task);
+
+    // send the object to the backend
+
+    // clear form
+}
+
 function init(){
     console.log("MyCalendar Page");
+
+    // Set up hook events SESSION 4
+    $("#btnSave").click(register);
 
     fetchTasks();
 }
