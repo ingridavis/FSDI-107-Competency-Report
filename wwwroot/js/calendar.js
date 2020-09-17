@@ -43,6 +43,7 @@ function register(){
     let notes = $("#txtNotes").val();
     let imp = $("#chkImportant").is(":checked");
 
+    
     // validation
     if(title.length < 5){
         alert("Please verify the name of the task");
