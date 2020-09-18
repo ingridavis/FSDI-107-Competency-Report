@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using myCalendar.Models;
 using System;
+using System.Linq; 
 
 
 namespace myCalendar.Controllers
@@ -19,6 +20,8 @@ namespace myCalendar.Controllers
 
          public IActionResult Tasks() // This action is to retrieve from the database
         {
+            
+            /*  object literal
             
             var list = new List<task>();
 
@@ -58,7 +61,9 @@ namespace myCalendar.Controllers
                 Notes = "Make lasagna",
                 Date = DateTime.Now
             };
-            list.Add(t4);
+            list.Add(t4);  */
+
+            var list = database.TasksTable.ToList();
             return Json(list);
         }
         [HttpPost]

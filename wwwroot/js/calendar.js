@@ -61,7 +61,23 @@ function register(){
     console.log(task);
 
     // send the object to the backend
+    $.ajax({
+        type: 'POST',
+        url: '/api/CreateTask',
+        data: JSON.stringify(task),
+        contentType: 'application/json',
+        success: res => {
+            console.log("Server says", res);
+            displayTask(res); // option 1: get all tasks and render them again
 
+            
+
+            
+        },
+        error: details => {
+            console.log("Error", details);
+        }
+    });
     // clear form
 }
 
