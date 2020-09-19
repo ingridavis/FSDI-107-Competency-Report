@@ -24,14 +24,21 @@ function displayTask(task){
 
     var syntax = `
     <div class='task'>
-        <i class="far fa-circle check"></i>
-        <div class='task-content'>
-            <h5 class='task-title'>${task.title}</h5>
-            <label class='task-notes'>${task.notes}</label> 
-        </div>
+        <div class="circle-with-task">
+            <i class="far fa-circle check"></i>
+            <div class='task-content'>
+                <h5 class='task-title'>${task.title}</h5>
+                <label class='task-notes'>${task.notes}</label> 
+            </div>
 
-    <i class='fas fa-star important'></i>
+        </div>
+        
+        
+        
+        <div><i class='fas fa-star important'></i></div>
+        
     </div>
+    
     `;
 
     container.append(syntax);
